@@ -1,0 +1,85 @@
+* { 
+    margin: 0; 
+    padding: 0; /* To Remove All White Spaces */
+}
+
+body {
+    width: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Styling The Conatiner to be responsive */
+.container {
+    width: 90%;
+    margin: 100px auto;
+    min-height: 400px;
+    overflow: auto;
+}
+
+header h1 {
+    text-align: center;
+}
+
+/* styling Displaying Errors */
+
+div .show-err {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Using flex on the form to arrange the input */
+form {
+    width: 50%;
+    margin: 10px auto;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column; /* Change the direction of the input and label */
+}
+
+input {
+    padding: 15px;
+    outline: none;
+    border: 0.2px solid lightgray;
+    border-radius: 5px;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+input::placeholder {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+input:hover {
+    box-shadow: 0 4px 8px 0 rgb(0, 120, 255, 0.4), 0 6px 20px 0 rgba(0, 120, 255, 0.4);
+}
+
+label {
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+/* Styling The Button */
+form button {
+    padding: 12px;
+    background-color: rgb(0, 123, 255);
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: rgb(0, 80, 255);
+    cursor: pointer;
+}
+
+/* styling the link */
+p {
+    padding: 5px;
+}
+
+p a {
+    margin-left: 5px;
+    text-decoration: none;
+}
