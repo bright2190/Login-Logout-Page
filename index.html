@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
 
     <!-- css link-->
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+
+    <button class="btn"></button>
     <script>
         window.addEventListener('load', function() {
         
@@ -28,12 +31,13 @@
         <div class="show-err"></div>
         <!-- Registration Form-->
         <form method="POST" action="">
-            <input type="text" name="name" placeholder="Enter Your Name">
+            
+            <input type="text" name="name" placeholder="Enter Username">
             <label>Name</label>
             
             <input type="email" name="email" placeholder="Enter Your Email">
             <label>Email</label>
-
+            
             <input type="password" name="password" placeholder="Enter Your Password">
             <label>Password</label>
 
@@ -44,6 +48,10 @@
         </form>
     </div>
     <!-- End Of Container-->
+
+    <script src="./js/jquery.js"></script>
+
+    <script src="./js/bootstrap.min.js"></script>
 
     <script src="./js/register.js"></script>
 </body>

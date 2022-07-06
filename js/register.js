@@ -46,13 +46,22 @@ submit.addEventListener('click', function(e) {
 
     // checking if input is empty
     if(name.length == 0) {
-        errors.push("Please Enter Your Name");
+        errors.push(`<div class='alert bg-warning'>Please Enter Your Name
+        <button class='close' data-dismiss='alert'>&times;</button>
+        </div>
+        `);
     }
     if(email.length == 0) {
-        errors.push("Please Enter Your Email");
+        errors.push(`<div class='alert bg-warning'>Please Enter Your Email
+        <button class='close' data-dismiss='alert'>&times;</button>
+        </div>
+        `);
     }
     if(password.length == 0) {
-        errors.push("Please Enter Your Password");
+        errors.push(`<div class='alert bg-warning'>Please Enter Your Password
+        <button class='close' data-dismiss='alert'>&times;</button>
+        </div>
+        `);
     }
 
     let show_err = document.querySelector(".show-err");
@@ -90,7 +99,7 @@ submit.addEventListener('click', function(e) {
 
             let success_tracker = [];
 
-            //loop through the array to check for the user's email exit
+            //loop through the array to check for the user's email exist
 
             for(let i = 0; i < makeUserNull.length; i++){
 
@@ -104,7 +113,7 @@ submit.addEventListener('click', function(e) {
             if(success_tracker.length > 0){
 				//the user exists already
 
-                show_err.innerHTML = `User with the ${email} Already Exit.`;
+                show_err.innerHTML = `User with the ${email} Already Exist.`;
                 document.querySelectorAll('input')[0].value = "";
                 document.querySelectorAll('input')[1].value = "";
                 document.querySelectorAll('input')[2].value = "";
@@ -123,7 +132,7 @@ submit.addEventListener('click', function(e) {
     
                 localStorage.setItem("regUser", JSON.stringify(users));
     
-                show_err.innerHTML = "Registered Succesfully";
+                show_err.innerHTML = "Registered Successfully";
                 document.querySelectorAll('input')[0].value = "";
                 document.querySelectorAll('input')[1].value = "";
                 document.querySelectorAll('input')[2].value = "";
@@ -139,3 +148,4 @@ submit.addEventListener('click', function(e) {
 
 
 })
+

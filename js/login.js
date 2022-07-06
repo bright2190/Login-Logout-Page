@@ -16,9 +16,11 @@ btn.addEventListener('click', function(e) {
 
     if(checkUser == null) {
         // do something
-        show_err.innerHTML = "You don't have an account. Please Sign Up.";
+        show_err.innerHTML = `<div class='alert bg-warning'>You don't have an account. Please Sign Up.
+        <button class='close' data-dismiss='alert'>&times;</button></div>
+        `;
     } else {
-        //loop through the array to check if the user's email exit
+        //loop through the array to check if the user's email exist
         for(let i = 0; i < checkUser.length; i++){
 
             if(checkUser[i].email == email && checkUser[i].password == password){
@@ -45,7 +47,9 @@ btn.addEventListener('click', function(e) {
             
             //register the user
 
-            show_err.innerHTML = "You don't have an account. Please Sign Up.";
+            show_err.innerHTML = `<div class='alert bg-warning'>You don't have an account. Please Sign Up.
+            <button class='close' data-dismiss='alert'>&times;</button></div>
+            `;
             document.querySelectorAll('input')[0].value = "";
             document.querySelectorAll('input')[1].value = "";
         }
